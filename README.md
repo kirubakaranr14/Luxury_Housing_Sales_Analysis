@@ -112,6 +112,5 @@ It shows how Python, SQL, and Streamlit can be used together to generate useful 
 ## Author
 
 **KIRUBAKARAN R**
-::: 
 
 ---
