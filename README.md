@@ -6,64 +6,76 @@ This project is based on a luxury housing dataset, where I analyzed booking tren
 
 ## 📂 Project Workflow
 
-### 1. Data Collection
-
-* Collected the luxury housing dataset
-
-### 2. Data Cleaning
-
-* Handled missing values
-* Standardized column formats
-* Created new features like Price_per_Sqft and Quarter_Number
-
-### 3. Data Analysis
-
-* Analyzed booking trends across quarters
-* Compared micro markets and pricing
-* Studied buyer behavior and conversion rates
-
-### 4. Data Visualization
-
-* Created charts using Power BI
-* Used line charts, bar charts, pie charts, scatter plots, and histogram
-
-### 5. Dashboard Creation
-
-* Built an interactive dashboard using Power BI
-* Organized visuals across multiple pages
-
-### 6. Insight Generation
-
-* Identified key patterns and business insights
-* Understood impact of infrastructure and traffic on pricing
-
-### 7. Suggestions
-
-* Provided recommendations based on data insights
-
+```text
+Raw CSV Dataset
+      ↓
+Data Cleaning using Python
+      ↓
+Feature Engineering
+      ↓
+PostgreSQL Database
+      ↓
+SQL Validation Queries
+      ↓
+Streamlit Dashboard
+      ↓
+Business Insights
+```
 ---
 
 ## 🛠 Tools & Technologies
 
-* Power BI
-* PostgreSQL
-* Python
-* Pandas
-* VS Code
+1. Python
+2. Pandas
+3. PostgreSQL
+4. SQLAlchemy
+5. Streamlit
+6. Plotly
+7. GitHub
 
 ---
 
 ## 📁 Project Structure
 
 ```
-Luxury_Housing_Sales_Analysis
+Luxury_Housing_Sales_Analysis/
 │
-├── Data_Cleaning.ipynb
-├── SQL_Queries.sql
-├── Luxury_Housing_Dashboard.pbix
-├── Documentation.docx
+├── app.py
+├── cleaned_luxury_housing.csv
+├── Data_Cleaning_process.ipynb
+├── Luxury_Housing_Bangalore.csv
 ├── README.md
+└── Sql.ipynb
 ```
+
+## Project Steps
+
+1. **Data Cleaning**
+
+   * Handled missing values
+   * Standardized column formats
+   * Cleaned text fields like micro-market and builder names
+
+2. **Feature Engineering**
+
+   * Created `Booking_Flag`
+   * Created `Quarter_Label`
+   * Created `Price_per_Sqft`
+
+3. **SQL Integration**
+
+   * Loaded cleaned data into PostgreSQL
+   * Performed validation and aggregation queries
+
+4. **Dashboard Development**
+
+   * Built an interactive Streamlit dashboard
+   * Created 10 business visualizations
+
+5. **Insight Generation**
+
+   * Analyzed market trends, builder performance, booking conversion, and buyer behavior
+
 
 ## ▶️ How to View the Dashboard
 
@@ -71,5 +83,35 @@ Luxury_Housing_Sales_Analysis
 2. Open it using Power BI Desktop
 3. Explore the dashboard pages and visuals
 
+
+## Key Insights
+
+* Booking trends change across quarters and micro-markets.
+* Prestige, SNN Raj, Brigade, L&T Realty, and Total Environment are among the top revenue-generating builders.
+* Configuration demand is almost equally distributed across 3BHK, 4BHK, and 5BHK+.
+* Sales channels show nearly balanced booking conversion rates.
+* Top builders can be identified clearly through KPI cards and revenue comparison.
+
+
+## How to Run
+
+```bash
+pip install pandas streamlit plotly sqlalchemy psycopg2-binary
+streamlit run app.py
+```
+
+---
+
+## Conclusion
+
+This project converts raw luxury housing data into a clean and interactive business dashboard.
+It shows how Python, SQL, and Streamlit can be used together to generate useful real estate insights.
+
+---
+
+## Author
+
+**KIRUBAKARAN R**
+::: 
 
 ---
